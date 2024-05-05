@@ -1,6 +1,6 @@
 # Expense Tracker
 
-Welcome to our GitHub repository for the "Expense Tracker" project! In this project, we have developed a simple expense tracker application using Python and Tkinter GUI toolkit. The application allows users to add their expenses, view the expense distribution using a pie chart, and manage their financial records efficiently.
+In this project, we have developed a simple expense tracker application using Python and Tkinter GUI toolkit. The application allows users to add their expenses, view the expense distribution using a pie chart, and manage their financial records efficiently.
 
 ## Project Overview
 
