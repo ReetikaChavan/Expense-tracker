@@ -1,45 +1,71 @@
-# Expense Tracker
+# Expense Tracker Application
 
-In this project, we have developed a simple expense tracker application using Python and Tkinter GUI toolkit. The application allows users to add their expenses, view the expense distribution using a pie chart, and manage their financial records efficiently.
+An Expense Tracker application built with a **Node.js** backend and a **React.js** frontend. This application helps users manage their expenses efficiently.
 
-## Project Overview
-
-- **Expense Management**: Users can add their expenses by entering the expense name and amount. The application validates the input and stores the expenses in a list.
-
-- **Data Visualization**: The application provides a feature to generate a pie chart that visualizes the distribution of expenses based on their names and amounts.
+---
 
 ## Features
 
-- **Expense Addition**: Users can add expenses by providing the name and amount of the expense. The application ensures that only valid numeric amounts are accepted.
+- User authentication (register, login, and logout).
+- Expense management (add, update, and delete expenses).
+- Validation middleware for secure user inputs.
+- RESTful APIs for user and expense data management.
+- Responsive frontend design.
+- Backend API deployment ready with **Vercel**.
 
-- **Pie Chart Generation**: Users can visualize their expenses using a pie chart, which displays the distribution of expenses based on their names and amounts.
+---
 
-## Instructions
+## Repository Structure
 
-To run the expense tracker application:
-
-1. Clone this repository to your local machine.
-   
-2. Ensure you have Python installed on your system.
-
-3. Install the required libraries using the following command:
-
-   ```bash
-   pip install matplotlib
-   ```
-
-4. Run the `expense_tracker.py` file using Python:
-
-   ```bash
-   python expense_tracker.py
-   ```
-
-5. The application window will open. Click on the "Start" button to begin using the expense tracker.
-
-## Repository Contents
-
-In this repository, you'll find:
-
-- `expense_tracker.py`: The Python script containing the code for the expense tracker application.
+### Backend
+- **Controllers/**
+  - `AuthController.js`: Handles authentication logic like login and registration.
+  - `ExpenseController.js`: Manages expense-related operations like creating, updating, and deleting expenses.
   
-- README: Provides an overview of the project and instructions for running the application.
+- **Middlewares/**
+  - `Auth.js`: Middleware for verifying user authentication tokens.
+  - `AuthValidation.js`: Middleware for validating user input.
+
+- **Models/**
+  - `User.js`: User schema for MongoDB.
+  - `db.js`: Database connection setup.
+
+- **Routes/**
+  - `AuthRouter.js`: Routes for authentication endpoints.
+  - `ExpenseRouter.js`: Routes for expense-related endpoints.
+  - `ProductRouter.js`: Routes for product-related functionality.
+
+- **Other Files**
+  - `.env`: Environment configuration file.
+  - `index.js`: Main entry point for the backend server.
+  - `package.json`: Contains backend dependencies.
+  - `vercel.json`: Configuration for deploying the backend with Vercel.
+
+### Frontend
+- **public/**
+  - Static assets such as `favicon.ico`, `index.html`, and icons.
+
+- **src/pages/**
+  - `App.js`: Entry point for the React application.
+  - `RefrshHandler.js`: Handles refresh token management.
+  - `index.js`: Renders the React app.
+  - Other utility files for styling (`App.css`, `index.css`) and setup (`reportWebVitals.js`, `setupTests.js`).
+
+- **Other Files**
+  - `.env`: Environment configuration file for frontend.
+  - `README.md`: Project documentation.
+  - `package.json`: Contains frontend dependencies.
+  - `vercel.json`: Configuration for deploying the frontend with Vercel.
+
+---
+
+## Installation and Setup
+
+### Prerequisites
+- Node.js and npm installed on your system.
+- MongoDB database.
+
+### Clone the Repository
+```bash
+git clone <repository-url>
+cd expense-tracker
